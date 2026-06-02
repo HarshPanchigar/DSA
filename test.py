@@ -1,16 +1,17 @@
-class Solution:
-    def reverseString(self, s):
-        left = 0
-        right = len(s) - 1
+def encode(strs):
+    newStrs = ""
+    for i in strs:
+        newStrs += str(len(i)) + "#" + i
+    return newStrs
 
-        while left < right:
-            s[left], s[right] = s[right], s[left]
+def decode(s):
+    res , i = [] , 0
+    while i < len(s):
+        j = i
+        while s[j] != "#":
+            j += 1
+        lengh = 
 
-            left += 1
-            right -= 1
-        print(s)
-
-obj = Solution()
-s = ["h","e","l","l","o"]
-print(len(s))
-obj.reverseString(s)
+strs = ["Hello","World"]
+print(encode(strs))
+print(decode(encode(strs)))
