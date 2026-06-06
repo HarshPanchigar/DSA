@@ -1,17 +1,8 @@
-def encode(strs):
-    newStrs = ""
-    for i in strs:
-        newStrs += str(len(i)) + "#" + i
-    return newStrs
+nums = [2,3,4,5,6,7]
+result = []
 
-def decode(s):
-    res , i = [] , 0
-    while i < len(s):
-        j = i
-        while s[j] != "#":
-            j += 1
-        lengh = 
+for n in nums:
+    if n == 4 or 10:
+        result.append(n)
 
-strs = ["Hello","World"]
-print(encode(strs))
-print(decode(encode(strs)))
+print(result)
