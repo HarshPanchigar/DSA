@@ -1,7 +1,17 @@
-# Input: 
-# nums = [3,4,5,6], target = 7
+def encode(strs):
+    newStrs = ""
+    for i in strs:
+        newStrs += str(len(i)) + "#" + i
+    return newStrs
 
-# Output: [0,1]
+def decode(s):
+    res , i = [] , 0
+    while i < len(s):
+        j = i
+        while s[j] != "#":
+            j += 1
+        lengh = 
 
-for i in range(2):
-    print(i)
+strs = ["Hello","World"]
+print(encode(strs))
+print(decode(encode(strs)))
