@@ -1,17 +1,12 @@
-def encode(strs):
-    newStrs = ""
-    for i in strs:
-        newStrs += str(len(i)) + "#" + i
-    return newStrs
+from math import sqrt
 
-def decode(s):
-    res , i = [] , 0
-    while i < len(s):
-        j = i
-        while s[j] != "#":
-            j += 1
-        lengh = 
+n = 36
+res = []
 
-strs = ["Hello","World"]
-print(encode(strs))
-print(decode(encode(strs)))
+for i in range(1, int(sqrt(n)) + 1):
+    if n % i == 0:
+        res.append(i)
+        if n // i != i:
+            res.append(n//i)
+
+print(sorted(res))
