@@ -6,5 +6,4 @@ class Solution:
 
     def fib(self, n: int) -> int:
         ans = self.fun(n)
-        return ans
-        
+        return ans      
