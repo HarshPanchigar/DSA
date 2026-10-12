@@ -1,12 +1,30 @@
-from math import sqrt
+class MyHashMap:
 
-n = 36
-res = []
+    def __init__(self):
+        self.data = [-1] * 1000001
 
-for i in range(1, int(sqrt(n)) + 1):
-    if n % i == 0:
-        res.append(i)
-        if n // i != i:
-            res.append(n//i)
+    def put(self, key: int, value: int) -> None:
+        self.data[key] = value
 
-print(sorted(res))
+    def get(self, key: int) -> int:
+        return self.data[key]
+
+    def remove(self, key: int) -> None:
+        self.data[key] = -1
+
+
+hashMap = MyHashMap()
+
+hashMap.put(1, 1)
+hashMap.put(2, 2)
+
+print(hashMap.get(1))
+print(hashMap.get(3))
+
+hashMap.put(2, 1)
+
+print(hashMap.get(2))
+
+hashMap.remove(2)
+
+print(hashMap.get(2))
